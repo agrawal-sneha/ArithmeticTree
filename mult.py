@@ -128,22 +128,22 @@ def main():
         flog.flush()
         if i == 0:
             template_adder_name = ""
-            capture_subprocess_output(["python", "PPO2_mult.py", "--input_bit={}".format(input_bit),
+            capture_subprocess_output(["python", "/content/ArithmeticTree/PPO2_mult.py", "--input_bit={}".format(input_bit),
                 "--max_iter={}".format(each_iter_ppo), "--strftime={}".format(strftime+"-{}".format(i))])
         else:
-            capture_subprocess_output(["python", "PPO2_mult.py", "--input_bit={}".format(input_bit),
+            capture_subprocess_output(["python", "/content/ArithmeticTree/PPO2_mult.py", "--input_bit={}".format(input_bit),
                 "--max_iter={}".format(each_iter_ppo), "--template={}".format(template_adder_name), "--strftime={}".format(strftime+"-{}".format(i))])
         verilog_file_name, data_line = get_best_file_from_ppo(strftime+ "-{}".format(i), input_bit)
         flog.write("PPO:\t"+data_line+"\n")
         flog.flush()
         template_mult_name = save_mult_file(verilog_file_name, strftime + "-{}".format(i))
         if i == 0:
-            capture_subprocess_output(["python", "MCTS_mult.py", "--input_bit={}".format(input_bit * 2),
+            capture_subprocess_output(["python", "/content/ArithmeticTree/MCTS_mult.py", "--input_bit={}".format(input_bit * 2),
                 "--max_iter={}".format(each_iter_mcts), 
                 "--template={}".format(template_mult_name), "--strftime={}".format(strftime+"-{}".format(i)),
                 "--area_w={:.2f}".format(args.area_w)])
         else:
-            capture_subprocess_output(["python", "MCTS_mult.py", "--input_bit={}".format(input_bit * 2),
+            capture_subprocess_output(["python", "/content/ArithmeticTree/MCTS_mult.py", "--input_bit={}".format(input_bit * 2),
                 "--max_iter={}".format(each_iter_mcts), "--template={}".format(template_mult_name), 
                 "--init_state", "--strftime={}".format(strftime+"-{}".format(i)),
                 "--area_w={:.2f}".format(args.area_w)])        
@@ -156,5 +156,5 @@ def main():
     flog.flush()
 
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     main()
