@@ -5,14 +5,14 @@ from collections import namedtuple
 import os
 import numpy as np
 
-import gym
+import gymnasium as gym
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.distributions import Categorical
 from torch.utils.data.sampler import BatchSampler, SubsetRandomSampler
-import multiplier_env
+import content.ArithmeticTree.multiplier_env as multiplier_env
 import random
 import time
 from tqdm import tqdm
@@ -245,3 +245,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
