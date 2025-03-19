@@ -12,7 +12,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.distributions import Categorical
 from torch.utils.data.sampler import BatchSampler, SubsetRandomSampler
-import content.ArithmeticTree.multiplier_env as multiplier_env
+import multiplier_env as multiplier_env
 import random
 import time
 from tqdm import tqdm
