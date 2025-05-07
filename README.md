@@ -139,11 +139,11 @@ For log outputs:
 
 
 ```
-adder_32b_7_79_70199b11a9eeffb33f33691274f08116 450.97  401.13  0.0 7   79  16  1   0   0   1.23
-adder_32b_8_82_8b6eaa7a64bf15b50f9b8abbb51d7145 408.76  416.82  0.0 8   82  15  2   0   0   1.86
-adder_32b_8_84_583cb9fc4b850f0be7be0df992a414c2 411.60  441.83  0.0 8   84  15  3   0   0   2.50
-adder_32b_8_83_b1077cbc7d258fcdb8cd10279b1f7630 412.09  423.21  0.0 8   83  15  4   0   0   3.12
-adder_32b_8_84_5053d501e2c45c99f6854e08ed3a4265 405.76  430.12  0.0 8   84  14  5   0   0   3.75
+multiplier_32b_7_79_70199b11a9eeffb33f33691274f08116 450.97  401.13  0.0 7   79  16  1   0   0   1.23
+multiplier_32b_8_82_8b6eaa7a64bf15b50f9b8abbb51d7145 408.76  416.82  0.0 8   82  15  2   0   0   1.86
+multiplier_32b_8_84_583cb9fc4b850f0be7be0df992a414c2 411.60  441.83  0.0 8   84  15  3   0   0   2.50
+multiplier_32b_8_83_b1077cbc7d258fcdb8cd10279b1f7630 412.09  423.21  0.0 8   83  15  4   0   0   3.12
+multiplier_32b_8_84_5053d501e2c45c99f6854e08ed3a4265 405.76  430.12  0.0 8   84  14  5   0   0   3.75
 ```
 
 When running *select_adder.py*, the selected top K adders are outputed into *adder_{N}b_full_openroad_{TIME}.log*, with four more columns:
